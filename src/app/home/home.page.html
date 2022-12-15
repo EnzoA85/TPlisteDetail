@@ -6,6 +6,7 @@
     </ion-title>
   </ion-toolbar>
 </ion-header>
+
 <ion-content>
   <ion-searchbar animated="true" placeholder="Ne sert à rien"></ion-searchbar>
   <ion-item *ngFor="let item of lstfilm" (click)="affDetail(item)">
@@ -16,6 +17,7 @@
       <h1>{{item.title}}</h1>
       <p>{{item.year}}</p>
     </ion-label>
-  </ion-item>
+  </ion-item> 
 </ion-content>
+
 </body>
