@@ -11,7 +11,7 @@ export class HomePage {
   lstfilm:any;
 
   constructor(private router: Router) {
-    fetch('./assets/films-json.json').then(res => res.json())
+    fetch('http://localhost:3000/series').then(res => res.json())
     .then(json => {
       this.lstfilm = json;
     });
