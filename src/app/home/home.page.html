@@ -1,23 +1,19 @@
-<body>
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Séries
-    </ion-title>
+    <ion-title>FouDeSéries</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-searchbar animated="true" placeholder="Ne sert à rien"></ion-searchbar>
-  <ion-item *ngFor="let item of lstfilm" (click)="affDetail(item)">
-    <ion-avatar>
-      <img alt="Silhouette of a person's head" src="{{item.image}}" style="--border-radius: 4px;" />
-    </ion-avatar>
-    <ion-label>
-      <h1>{{item.titre}}</h1>
-      <p>{{item.premiereDiffusion}}</p>
-    </ion-label>
-  </ion-item> 
+  <ion-img src="./assets/logo.png"></ion-img>
+  <center><p>Tu regardes quoi en ce moment ? <br/>Pas de spoil, je ne suis pas à jour...</p></center>
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+        <ion-tab-button tab="schedule" (click)="pageDesSeries()">
+          <ion-icon name="newspaper-outline"></ion-icon>
+          <ion-label>Séries</ion-label>
+        </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+
 </ion-content>
- 
-</body>

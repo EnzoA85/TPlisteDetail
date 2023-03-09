@@ -1,15 +1,14 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
+      <ion-back-button defaultHref="serie"></ion-back-button>
     </ion-buttons>
-    <ion-title>detail</ion-title>
+    <ion-title>{{item.titre}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-label>
-    <h1>{{item.titre}}</h1><br/>
     <p>Cette série à été diffuser pour la première fois le {{item.premiereDiffusion}}.</p><br/>
     <h6>Durée : {{item.duree}}</h6><br/>
     <h4>Genre :</h4><br/>

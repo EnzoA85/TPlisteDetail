@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
-import { Router,NavigationExtras} from '@angular/router';
-
+import { Component, } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -8,21 +7,10 @@ import { Router,NavigationExtras} from '@angular/router';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  lstfilm:any;
 
-  constructor(private router: Router) {
-    fetch('http://localhost:3000/series').then(res => res.json())
-    .then(json => {
-      this.lstfilm = json;
-    });
-  }
-  affDetail(item)
-  {
-    let NavigationExtras: NavigationExtras = {
-      state : {
-      param1: item
-      }
-      };
-    this.router.navigate(['/detail'],NavigationExtras);
+  constructor(private router:Router) { }
+
+  pageDesSeries(){
+    this.router.navigate(['/serie'])
   }
 }

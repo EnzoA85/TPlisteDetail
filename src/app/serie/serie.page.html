@@ -1,0 +1,23 @@
+
+  <ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-title>
+        Séries
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <ion-searchbar animated="true" placeholder="Ne sert à rien"></ion-searchbar>
+    <ion-item *ngFor="let item of lstfilm" (click)="affDetail(item)">
+      <ion-avatar>
+        <img alt="Silhouette of a person's head" src="{{item.image}}" style="--border-radius: 4px;" />
+      </ion-avatar>
+      <ion-label>
+        <h1>{{item.titre}}</h1>
+        <p>{{item.premiereDiffusion}}</p>
+      </ion-label>
+    </ion-item>
+
+  </ion-content>
+  
