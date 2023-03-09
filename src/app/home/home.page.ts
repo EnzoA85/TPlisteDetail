@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { Router,NavigationExtras} from '@angular/router';
-import { Geolocation } from '@ionic-native/geolocation/ngx';
 
 
 @Component({
