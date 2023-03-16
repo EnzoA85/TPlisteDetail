@@ -11,7 +11,7 @@
   <ion-label>
     <div style="display: flex;">
       <p>Cette série à été diffuser pour la première fois le {{item.premiereDiffusion}}.</p>
-      <ion-img style="width:100px; height:100px;margin-top:-25px;" src={{imageFavori}} (click)="addFavorie()"></ion-img>
+      <ion-img style="width:100px; height:100px;margin-top:-25px;" src={{imageFavori}} (click)="addFavorie(item)"></ion-img>
     </div>
     <h6>Durée : {{item.duree}}</h6><br/>
     <h4>Genre :</h4><br/>
