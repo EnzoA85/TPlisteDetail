@@ -9,6 +9,7 @@ import { Router,ActivatedRoute } from '@angular/router';
 export class DetailPage implements OnInit {
 
   item;
+  public imageFavori = "./assets/étoileVide.png";
 
   constructor(private router: Router, private activeRoute : ActivatedRoute) {
     this.activeRoute.queryParams.subscribe(params=>{
@@ -19,5 +20,14 @@ export class DetailPage implements OnInit {
    }
 
   ngOnInit() {
+  }
+
+  addFavorie()
+  {
+    if (this.imageFavori=='./assets/étoileVide.png') {
+  		this.imageFavori='./assets/étoilePleine.png';
+  	} else {
+		this.imageFavori = './assets/étoileVide.png';
+  	}
   }
 }
